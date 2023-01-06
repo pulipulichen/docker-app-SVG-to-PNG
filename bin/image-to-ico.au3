@@ -2,7 +2,7 @@
 #include <FileConstants.au3>
 
 Global $sPROJECT_NAME = "docker-app-Image-to-ICO"
-Global $sFILE_EXT = "ZIP (*.zip)"
+Global $sFILE_EXT = "Images (*.*)"
 
 ;~ MsgBox($MB_SYSTEMMODAL, "Title", "This message box will timeout after 10 seconds or select the OK button.", 10)
 Local $sWorkingDir = @WorkingDir
