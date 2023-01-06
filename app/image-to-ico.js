@@ -19,8 +19,11 @@ let main = async function () {
       filenameNoExt = filenameNoExt.slice(0, filenameNoExt.lastIndexOf('.'))
     }
     // await ShellSpawn(`img2pdf -o "/input/${filenameNoExt}.pdf" ${imgs.join(" ")}`)
-    await ShellExec(`convert "${file}" -flatten -fuzz 1% -trim +repage -thumbnail 64x64^ -gravity center -extent 64x64 "${path.resolve(dirname, filenameNoExt + '.ico')}"`)
+    // await ShellExec(`convert "${file}" -flatten -fuzz 1% -trim +repage -thumbnail 64x64^ -gravity center -extent 64x64 "${path.resolve(dirname, filenameNoExt + '.ico')}"`)
     // convert "a.png" -flatten -fuzz 1% -trim +repage -thumbnail 64x64^ -gravity center -extent 64x64 "b.ico"
+
+    await ShellExec(`convert -gravity center "${file}" -flatten -fuzz 1% -trim +repage -resize 64x64 -extent 64x64 "${path.resolve(dirname, filenameNoExt + '.ico')}"`)
+    // convert -gravity center "c.png" -flatten -fuzz 1% -trim +repage -resize 64x64 -extent 64x64 "b.ico"
   }
 }
 
