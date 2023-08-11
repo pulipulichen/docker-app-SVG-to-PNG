@@ -24,7 +24,9 @@ let main = async function () {
 
     // await ShellExec(`convert -gravity center "${file}" -flatten -fuzz 1% -trim +repage -resize 64x64 -extent 64x64 "${path.resolve(dirname, filenameNoExt + '.ico')}"`)
     // convert -gravity center "c.png" -flatten -fuzz 1% -trim +repage -resize 64x64 -extent 64x64 "b.ico"
-    await ShellExec(`svgexport "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}" 256:`)
+    // await ShellExec(`svgexport "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}" 256:`)
+    // -background none -size x1080 in.svg out.png
+    await ShellExec(`convert -background none -size 256x "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
   }
 }
 
