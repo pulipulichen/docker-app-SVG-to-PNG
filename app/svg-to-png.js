@@ -26,7 +26,7 @@ let main = async function () {
     // convert -gravity center "c.png" -flatten -fuzz 1% -trim +repage -resize 64x64 -extent 64x64 "b.ico"
     // await ShellExec(`svgexport "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}" 256:`)
     // -background none -size x1080 in.svg out.png
-    await ShellExec(`convert "${file}" -background none "${path.resolve(dirname, filenameNoExt + '.png')}"`)
+    await ShellExec(`convert -background none "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
   }
 }
 
