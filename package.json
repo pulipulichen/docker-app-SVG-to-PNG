@@ -1,7 +1,7 @@
 {
-  "name": "docker-app-Image-to-ICO",
+  "name": "docker-app-SVG-to-PNG",
   "version": "1.0.0",
-  "description": "Resize and convert image to ICO format.",
+  "description": "Convert SVG to PNG at 256px width.",
   "main": "index.js",
   "scripts": {
     "d0.build": "docker-compose build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-app-Image-to-ICO.git"
+    "url": "git+https://pulipuli.chen@gmail.com@github.com/pulipulichen/docker-app-SVG-to-PNG.git"
   },
   "keywords": [
     "PWA"
@@ -19,9 +19,9 @@
   "author": "Pulipuli Chen",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pulipulichen/docker-app-Image-to-ICO/issues"
+    "url": "https://github.com/pulipulichen/docker-app-SVG-to-PNG/issues"
   },
-  "homepage": "https://github.com/pulipulichen/docker-app-Image-to-ICO#readme",
+  "homepage": "https://github.com/pulipulichen/docker-app-SVG-to-PNG#readme",
   "dependencies": {
   }
 }

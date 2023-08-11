@@ -1,5 +1,5 @@
-# docker-app-Image-to-ICO
-Resize and convert image to ICO format.
+# docker-app-SVG-to-PNG
+Convert SVG to PNG at 256px width.
 
-- Example file: https://pulipulichen.github.io/docker-app-Image-to-ICO/example%20folder/image%20%E5%9C%96%E7%89%87.tif
-- Windows: https://pulipulichen.github.io/docker-app-Image-to-ICO/bin/image-to-ico.exe
+- Example file: [TODO]
+- Windows: https://pulipulichen.github.io/docker-app-SVG-to-PNG/bin/svg-to-png.exe

@@ -3,7 +3,7 @@ services:
   app:
     build: .
     tty: true
-    command: node /app/image-to-ico.js "/input/[INPUT]"
+    command: node /app/svg-to-png.js "/input/[INPUT]"
     volumes: 
       - ./app:/app/
       - ./cache:/cache/

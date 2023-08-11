@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_NAME=docker-app-Image-to-ICO
+PROJECT_NAME=docker-app-SVG-to-PNG
 
 # -------------------
 
