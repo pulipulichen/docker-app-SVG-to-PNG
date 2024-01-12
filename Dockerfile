@@ -1,4 +1,6 @@
-FROM node:21.5.0-bullseye
+#FROM node:18.12.1-buster
+#FROM node:21.5.0-bullseye
+FROM pudding/docker-app:node-20-inkscape-20230922-2210
 
 RUN apt-get update
 

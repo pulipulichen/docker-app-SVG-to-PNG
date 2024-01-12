@@ -29,7 +29,8 @@ let main = async function () {
     // -background none -size x1080 in.svg out.png
     
     // await ShellExec(`convert -resize 256x -background none -extent 256x "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
-    await ShellExec(`convert -density 300 -font /noto.woff -background none "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
+    // await ShellExec(`convert -density 300 -font /noto.woff -background none "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
+    await ShellExec(`inkscape --export-dpi=300 --export-background=white --export-png="${path.resolve(dirname, filenameNoExt + '.png')}" "${file}"`)
   }
 }
 
