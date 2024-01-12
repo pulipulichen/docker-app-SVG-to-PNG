@@ -13,7 +13,8 @@ let main = async function () {
     let file = files[i]
     
     let filename = path.basename(file)
-    let dirname = path.dirname(file)
+    //let dirname = path.dirname(file)
+    let dirname = '/output/'
     let filenameNoExt = filename
     if (filenameNoExt.indexOf('.') > -1) {
       filenameNoExt = filenameNoExt.slice(0, filenameNoExt.lastIndexOf('.'))
