@@ -4,9 +4,10 @@
   "description": "Convert SVG to PNG at 256px width.",
   "main": "index.js",
   "scripts": {
+    "start": "docker-compose up",
+    "commit-docker-image": "docker-compose build; bash ./docker-build/image/commit-docker-image.sh",
     "d0.build": "docker-compose build",
     "d1.bash": "docker-compose run app bash",
-    "start": "docker-compose up",
     "update": "node update.js"
   },
   "repository": {
