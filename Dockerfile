@@ -10,3 +10,6 @@ RUN apt-get install -y \
 # RUN npm install
 
 CMD ["bash"]
+
+RUN apt-get install -y fontconfig fonts-wqy-zenhei
+RUN fc-cache -fv
