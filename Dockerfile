@@ -16,3 +16,4 @@ RUN fc-cache -fv
 RUN apt-get install -y fonts-noto-cjk-extra
 RUN fc-cache -fv
 RUN wget -O /noto.woff https://fonts.cdnfonts.com/s/107410/NotoSansTC[wght].woff
+RUN apt-get install -y ttf-mscorefonts-installer
