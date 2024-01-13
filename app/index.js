@@ -30,7 +30,12 @@ let main = async function () {
     
     // await ShellExec(`convert -resize 256x -background none -extent 256x "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
     // await ShellExec(`convert -density 300 -font /noto.woff -background none "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
-    await ShellExec(`inkscape --export-dpi=300 --export-background=white --export-png="${path.resolve(dirname, filenameNoExt + '.png')}" "${file}"`)
+
+
+    await ShellExec(`inkscape --export-dpi=300 --export-background=white --export-png="${path.resolve(dirname, filenameNoExt + '-tmp.png')}" "${file}"`)
+
+    await ShellExec(`convert "${path.resolve(dirname, filenameNoExt + '-tmp.png')}" -trim +repage "${path.resolve(dirname, filenameNoExt + '.png')}"`)
+    fs.unlinkSync(path.resolve(dirname, filenameNoExt + '-tmp.png'))
   }
 }
 
