@@ -36,13 +36,13 @@ let main = async function () {
     // await ShellExec(`convert -density 300 -font /noto.woff -background none "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
 
 
-    await ShellExec(`inkscape --version`)
+    // await ShellExec(`inkscape --version`)
 
     await ShellExec(`inkscape --export-dpi=300 --export-background=white --export-png="${path.resolve(dirname, filenameNoExt + '-tmp.png')}" "${file}"`)
 
-    console.log({file})
+    // console.log({file})
 
-    await ShellExec(`inkscape --export-emf=="${path.resolve(dirname, filenameNoExt + '.emf')}" "${file}"`)
+    await ShellExec(`inkscape --export-emf="${path.resolve(dirname, filenameNoExt + '.emf')}" "${file}"`)
 
     await ShellExec(`convert "${path.resolve(dirname, filenameNoExt + '-tmp.png')}" -alpha set -bordercolor white -border 1 -fill none -fuzz 1% -draw "color 0,0 floodfill" -shave 1x1 -fuzz 5% -trim +repage "${path.resolve(dirname, filenameNoExt + '.png')}"`)
     fs.unlinkSync(path.resolve(dirname, filenameNoExt + '-tmp.png'))

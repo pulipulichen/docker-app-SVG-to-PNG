@@ -1,13 +1,13 @@
 #FROM node:18.12.1-buster
 #FROM node:21.5.0-bullseye
-# FROM pudding/docker-app:node-20-inkscape-20230922-2210
-FROM node:20-buster
+FROM pudding/docker-app:node-20-inkscape-20230922-2210
+# FROM node:20-buster
 
 # RUN apt-get update && \
 #     apt-get install -y software-properties-common
 # RUN add-apt-repository -y ppa:inkscape.dev/stable
-RUN apt-get update
-RUN apt-get install -y inkscape
+# RUN apt-get update
+# RUN apt-get install -y inkscape
 
 # RUN apt-get update
 
