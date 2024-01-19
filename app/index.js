@@ -32,7 +32,11 @@ let main = async function () {
     // await ShellExec(`convert -density 300 -font /noto.woff -background none "${file}" "${path.resolve(dirname, filenameNoExt + '.png')}"`)
 
 
+    await ShellExec(`inkscape --version`)
+
     await ShellExec(`inkscape --export-dpi=300 --export-background=white --export-png="${path.resolve(dirname, filenameNoExt + '-tmp.png')}" "${file}"`)
+
+    console.log({file})
 
     await ShellExec(`inkscape --export-emf=="${path.resolve(dirname, filenameNoExt + '.emf')}" "${file}"`)
 
