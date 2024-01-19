@@ -11,6 +11,10 @@ let main = async function () {
   let files = GetFiles()
   for (let i = 0; i < files.length; i++) {
     let file = files[i]
+
+    if (file.endsWith('.svg') === false) {
+      continue
+    }
     
     let filename = path.basename(file)
     //let dirname = path.dirname(file)
