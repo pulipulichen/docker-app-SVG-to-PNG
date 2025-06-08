@@ -3,6 +3,7 @@ services:
   app:
     image: pudding/docker-app:docker-app-svg-to-png-app-20240119.145125
     command: node /app/index.js "/input/__INPUT__"
+    user: "${UID}:${GID}"
     tty: true
     environment:
       - LOCAL_VOLUMN_PATH=/input/
